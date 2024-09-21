@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Get.to(Profile());
+                Get.to(const Profile());
               },
               child: Text("profile Screen".tr),
             ),

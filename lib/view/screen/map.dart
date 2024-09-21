@@ -7,7 +7,7 @@ class MapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("map"),
+        title: const Text("map"),
       ),
     );
   }

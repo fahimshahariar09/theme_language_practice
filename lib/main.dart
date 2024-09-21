@@ -6,7 +6,7 @@ import 'package:theme_language/utills/theme.dart';
 import 'package:theme_language/view/screen/home.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: AppTheme().lightTheme,
       translations: AppLanguage(),
-      locale: Locale("bn"),
-      home: HomePage(),
+      locale: const Locale("bn"),
+      home: const HomePage(),
     );
   }
 }

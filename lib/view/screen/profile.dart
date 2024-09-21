@@ -24,17 +24,17 @@ class Profile extends StatelessWidget {
           children: [
             Text("profile".tr),
             Obx(()=>DropdownButton(
-              hint: Text(
+              hint: const Text(
                   'Please choose a location'), // Not necessary for Option 1
-              value: "${profileController.selectedLanguage.value}",
+              value: profileController.selectedLanguage.value,
               onChanged: (newValue) {
                 profileController.selectedLanguage.value = newValue!;
                 profileController.changeLanguageFun();
               },
               items: profileController.languageList.map((location) {
                 return DropdownMenuItem(
-                  child: new Text(location),
                   value: location,
+                  child: Text(location),
                 );
               }).toList(),
             ))
