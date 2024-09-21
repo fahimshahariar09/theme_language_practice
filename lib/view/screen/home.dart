@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("home screen"),
+        title: Text("home screen".tr),
       ),
       body: Center(
         child: Column(
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Get.to(Profile());
               },
-              child: Text("profile Screen"),
+              child: Text("profile Screen".tr),
             ),
           ],
         ),

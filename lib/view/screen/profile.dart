@@ -10,7 +10,7 @@ class Profile extends StatelessWidget {
     ProfileController profileController = Get.put(ProfileController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("profile"),
+        title: Text("profile".tr),
         actions: [
           Switch(
               value: profileController.isLightTheme.value,
@@ -22,8 +22,8 @@ class Profile extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Text("profile"),
-            DropdownButton(
+            Text("profile".tr),
+            Obx(()=>DropdownButton(
               hint: Text(
                   'Please choose a location'), // Not necessary for Option 1
               value: "${profileController.selectedLanguage.value}",
@@ -37,7 +37,7 @@ class Profile extends StatelessWidget {
                   value: location,
                 );
               }).toList(),
-            )
+            ))
           ],
         ),
       ),

@@ -28,5 +28,6 @@ class ProfileController extends GetxController {
       default:
         local = "en";
     }
+    Get.updateLocale(Locale(local));
   }
 }
