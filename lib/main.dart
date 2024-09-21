@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:theme_language/utills/language.dart';
 import 'package:theme_language/utills/theme.dart';
 import 'package:theme_language/view/screen/home.dart';
 
@@ -15,6 +16,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme().lightTheme,
+      translations: AppLanguage(),
+      locale: Locale("bn"),
       home: HomePage(),
     );
   }

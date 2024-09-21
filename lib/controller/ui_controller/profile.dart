@@ -1,25 +1,32 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ProfileController extends GetxController{
-
-  RxBool isLightTheme =true.obs;
+class ProfileController extends GetxController {
+  RxBool isLightTheme = true.obs;
   RxString selectedLanguage = "BD".obs;
-  RxList<String> languageList =<String>[
+  RxList<String> languageList = <String>[
     "BD",
     "US",
     "India",
   ].obs;
 
-
-
-  changeThemeFun()async{
+  changeThemeFun() async {
     isLightTheme.value = !isLightTheme.value;
 
-    Get.changeTheme(!isLightTheme.value ? ThemeData.dark() :ThemeData.light());
+    Get.changeTheme(!isLightTheme.value ? ThemeData.dark() : ThemeData.light());
   }
 
-
+  changeLanguageFun() {
+    String local = "en";
+    switch (selectedLanguage.value) {
+      case "BD":
+        local = "bn";
+        break;
+      case "India":
+        local = "hi";
+        break;
+      default:
+        local = "en";
+    }
+  }
 }
